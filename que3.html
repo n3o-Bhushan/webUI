@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Question 3</title>
+
+<script>
+
+	   function getAnswer() {
+            var rad = document.getElementsByName('option2');
+            var url= window.location.href;
+            var str=url.substring(url.indexOf('?'));
+            for (var i = 0, length = rad.length; i < length; i++) {
+                    if (rad[i].checked) {
+                        if (rad[i].value==="Facebook") {
+                            location.href= "./que4.html"+str+"&read="+(1);
+                    }
+                    else{
+                            location.href= "./que4.html"+str+"&read="+(0);
+                    }
+                }
+            }
+        }
+
+
+function display(attr) {
+		var selected = attr.getAttribute("value");
+		document.getElementById("blank1").innerHTML = selected;
+		if(selected == '650')
+			{
+				document.cookie = "3";
+			}
+		
+	}
+
+
+	function display1(attr) {
+
+		document.getElementById("blank2").innerHTML = attr.getAttribute("value");
+	}
+	
+</script>
+</head>
+<body>
+<header align="center">HTML5 MARK-DATALIST SCORM - SCOs</header>
+<br><br><br><br>
+<form id="form" action="que4.html" method="GET">
+	<table frame="box" align="center" style="border-radius: 10px">
+
+		<tr>
+			<th bgcolor="#d3d3d3" style="border-radius: 8px" colspan=2>
+				Question 3</th>
+		</tr>
+		<tr>
+			<td style="padding-left: 30px;"><br><br><br><br>As per the latest twitter news, complete the article snippet
+				given by<br> selecting appropriate choices for the blanks.<br>
+			<br><br><br><br>
+			<br> <input type="radio" name="option1" 
+				value="650" onclick=display(this)> Option 1 Mark 1: $650
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="option2"
+				 value="Twitter" onclick=display1(this)> Option 1 Mark
+				2: Twitter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+			<br> <input type="radio" name="option1" 
+				value="550" onclick=display(this)> Option 2 Mark 1: $550
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="option2"
+				 value="Google" onclick=display1(this)> Option 1 Mark 2:
+				Google &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+			<br> <input type="radio" name="option1" 
+				value="650" onclick=display(this)> Option 3 Mark 1: $650
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="option2"
+				 value="Facebook" onclick=display1(this)> Option 1 Mark
+				2: Facebook &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+			<br>&emsp;&emsp; <input type="button" name="submit"
+				value="Submit & Next Question"
+				style="background: transparent; border-radius: 4px; border: .5px solid" 
+				onclick="getAnswer();"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="reset" name="reset" value="Cancel & Clear Solution"
+				style="background: transparent; border-radius: 4px; border: .5px solid"><br><br><br><br>
+			</td>
+			<td style="padding-right: 30px;"> <br><br><br><br>"<br>Twitter wants more cash. The company announced two<br>
+				<mark>
+					$<label id="blank1">______</label>
+				</mark> million debt offerings in a filing today. each with a<br>
+				potential $100 increase provided that the sales are<br>
+				oversubscribed. Assuming full tip. including the $100 million <br>boosters
+				<mark>
+					<label id="blank2">_________</label>
+				</mark> will raise up to $1.5 billion with the two<br> offerings.<br>"
+				<footer>
+					<p>
+					<br>
+						Source: httplitechcrunch.com/2014/09/104witter-to-raise-up-<br>to-1
+						-5b-in-debt-offering
+					</p>
+				</footer>
+				<br><br><br><br>
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

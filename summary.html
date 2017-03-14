@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Summary</title>
+	
+	
+</head>
+<body >
+<header align="center">HTML5 MARK-DATALIST SCORM - SCOs</header>
+<br><br>
+<table frame="box" align="center" style="border-radius: 8px;border" width="55%">
+<form onload="showScores();" action="login.html">
+<tr>
+	<th bgcolor="#d3d3d3" style="border-radius: 8px">Score Card</th>
+</tr>
+<tr>
+	<td>
+	<table frame="box" align="center" width="100%">
+		<tr>
+			<td>
+				<details>  
+
+				  <summary>Quantitave Section</summary>  
+				   	<ul>
+
+                    <li><data value="Question"><strong>Number of Questions Answered:</strong>2</data></li>
+
+                    <li><data value="Answer"><strong>Number of Correct Answers:</strong><label><input style="border:none" type="text" id="quantScore" readonly="readonly"/></label></data></li>
+
+                    <li><data value="Percentage"><strong>Score:</strong> <label><input style="border:none; width:20px" type="text" id="quantPerc" readonly="readonly"/></label></data></li>
+                	</ul>
+
+				</details>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<details>  
+				  <summary>Reading Section</summary>  
+                	<ul>
+                    <li><data value="Question"><strong>Number of Questions Answered:</strong>1</data></li>
+
+                    <li><data value="Answer"><strong>Number of Correct Answers:</strong><label><input type="text" id="readScore" readonly="readonly" style="border: none;"/></label></data></li>
+
+                    <li><data value="Percentage"><strong>Score:</strong><label><input type="text" id="readPerc" readonly="readonly" style="border: none;width:20px"/></label></data></li>
+                	</ul>
+				</details>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<details>  
+				  <summary>Audio/Video Section</summary>  
+					<ul>
+                    <li><data value="Question"><strong>Number of Questions Answered:</strong>1</data></li>
+
+                    <li><data value="Answer"><strong>Number of Correct Answers:</strong><label><input type="text" id="vidScore" class="res1" readonly="readonly" style="border: none;"/></label></data></li>
+
+                    <li><data value="Percentage"><strong>Score:</strong><label><input type="text" id="vidPerc" class="res1" readonly="readonly" style="border: none;width:20px"/></label></data></li>
+                </ul>
+				</details>
+			</td>
+		</tr>
+	</table>
+	</td>
+</tr>
+<tr>
+	<td align="center">
+		<h2>Thank You!!</h2>
+	</td>
+</tr>
+<tr>
+	<td align="center">
+		<input type="submit" name="Finish" value="Finish" style="background: transparent; border-radius:5px; border:1px solid; width: 10em; height: 2em">
+	</td>
+</tr>
+</table>
+</form>
+<script type="text/javascript">
+        function showScores(val)
+        {
+            var variable = [], spl;
+
+            var a = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+
+            for(var i = 0; i < a.length; i++)
+            {
+                 spl = a[i].split('=');
+                 variable.push(spl[0]);
+                 variable[spl[0]] = spl[1];
+            }
+
+             return variable[val]?variable[val]:0;
+        }
+        var get_qscore=showScores("quant");
+        var get_rscore=showScores("read");
+        var get_vscore=showScores("vid");
+
+        document.getElementById('quantScore').value=get_qscore;
+        document.getElementById('quantPerc').value=(parseInt(get_qscore)/2)*100;
+
+        document.getElementById('readScore').value=get_rscore;
+        document.getElementById('readPerc').value=(parseInt(get_rscore)/1)*100;
+
+        document.getElementById('vidScore').value=get_vscore;
+        document.getElementById('vidPerc').value=(parseInt(get_vscore)/1)*100;
+    </script>
+</body>
+</html>

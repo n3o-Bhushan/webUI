@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>
+Question 1
+</title>
+<script type="text/javascript">
+        function getAnswer() {
+            var rad = document.getElementsByName('option');
+            var url= window.location.href;
+            var val=0;
+            for (var i = 0, length = rad.length; i < length; i++) {
+                if (rad[i].checked) {
+                    location.href= "./que2.html?quant="+rad[i].value;
+                }
+            }
+        }
+    </script>
+</head>
+<body >
+<header align="center">HTML5 MARK-DATALIST SCORM - SCOs</header>
+<br><br><br><br>
+<form action="que2.html" id="form" method="GET">
+    <table style="border-style: solid; border-width: 2px;  border-radius: 8px" align="center">
+      <tr>
+        <th bgcolor="#d3d3d3" style="border-radius: 8px;" colspan=2>
+          Question 1</th>
+      </tr>
+      <tr>
+        <td>Given points(x1,y1) and (x2,y2) select the formula to find
+          the equation<br> of given line.<br>
+        <br>
+        <br>&emsp;&emsp;&nbsp;<input type="radio" name="option"
+          value="0"> <math>
+ <mrow>
+  <mi>y </mi>
+  <mo> = </mo>
+  <mrow>
+    <mi>m </mi>
+    <mi>x </mi>
+  </mrow>
+  <mo>+ </mo>
+  <mi>c</mi>
+ </mrow>
+</math>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+
+<input type="radio" name="option" value="1"> 
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <math>
+          <msup>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mrow>
+                  <mi>x</mi>
+                </mrow>
+                <mo>-</mo>
+                <mrow>
+                  <mi>h</mi>
+                </mrow>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mn><sup>2</sup></mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mrow>
+                  <mi>y</mi>
+                </mrow>
+                <mo>-</mo>
+                <mrow>
+                  <mi>k</mi>
+                </mrow>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mn><sup>2</sup></mn>
+          </msup>
+          <mo>=</mo>
+          <msup>
+            <mi>r</mi>
+            <mn><sup>2</sup></mn>
+          </msup>
+        </math><br>
+        <br>&emsp;&emsp; <input type="radio" name="option"
+           value="0"> 
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+       <mrow>
+  <mi>y </mi>
+  <mo> - </mo>
+  <msub>
+    <mi>y </mi>
+    <mn><sub>1</sub> </mn>
+  </msub>
+    <mo>=</mo>
+    <mrow>
+    <mi>m </mi>
+    <mo>(</mo>
+    <mi>x </mi>
+    <mo>-</mo>
+    <msub>
+    <mi>x </mi>
+    <mn><sub>1</sub> </mn>
+  </msub>
+  <mo>)</mo>
+  </mrow>
+   </mrow>
+   </math> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio"
+          name="option" value="0">
+       <math xmlns="http://www.w3.org/1998/Math/MathML">   
+      <mrow>
+  <mi>y </mi>
+  <mo> - </mo>
+  <msub>
+    <mi>y </mi>
+    <mn><sub>2</sub> </mn>
+  </msub>
+    <mo>=</mo>
+    <mfrac>
+    <mrow>
+     <mo>(</mo>
+   <msub> <mi>y</mi>
+            <mn><sub>2</sub></mn></msub>
+      <mo>-</mo>
+     <msub> <mi>y</mi>
+            <mn><sub>1</sub></mn></msub>
+    <mo>)</mo>
+  <mo>/</mo>
+  </mrow>
+    <mrow>
+     <mo>(</mo>
+   <msub> <mi>x</mi>
+            <mn><sub>2</sub></mn></msub>
+      <mo>-</mo>
+     <msub> <mi>x</mi>
+            <mn><sub>1</sub></mn></msub>
+    <mo>)</mo>
+  </mrow>
+  </mfrac>
+    <mrow>
+     <mo>(</mo>
+   <msub> <mi>x</mi>
+            <mn></mn></msub>
+      <mo>-</mo>
+     <msub> <mi>x</mi>
+            <mn><sub>2</sub></mn></msub>
+    <mo>)</mo>
+  </mrow>
+  </mfrac>
+  </mrow>
+   </math><br><br><br>
+        <br> &emsp;&emsp;&emsp;
+
+        <input type="button" name="submit"
+          value="Submit & Next Question"
+          style="background: transparent; border-radius: 4px; border: .5px solid" onclick="getAnswer();" 
+          >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="reset" name="reset" value="Cancel & Clear Solution"
+          style="background: transparent; border-radius: 4px; border: .5px solid">
+        </td>
+        <td><img src="graph.JPG"></td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>
